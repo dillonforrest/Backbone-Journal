@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Journal by Dillon</title>
+	<link href='style.css' type='text/css' media='all' rel='stylesheet'/>
+	<script src='lib/json2.js'></script>
+	<script src='lib/jquery.js'></script>
+	<script src='lib/jquery.tmpl.js'></script>
+	<script src='lib/underscore.js'></script>
+	<script src='lib/backbone.js'></script>
+	<script src='lib/backbone.localstorage.js'></script>
+	<script src='journal.js'></script>
+</head>
+<body>
+
+<div id=app>
+	<!-- views go here -->
+</div>
+
+		<!-- templates -->
+
+<script id='homeview-template' type='text/template'>
+<h1 class='title'>My Journal</h1>
+<div id='curr-date-new-entry'>
+	<div id='curr-date'>${currDate}</div>
+	<div id='new-entry'>
+		<a href='#/new'>New Entry</a>
+	</div>
+</div>
+{{if numEntries}}
+<div id='archive'>
+	<h2 class='small-title'>Archive</h1>
+	<ul id='archived-entries'>
+	</ul>
+</div>
+<div id='clear-archive'>
+	<a href='#' id='clear-entries'>Click here to clear entries</a>
+</div>
+{{/if}}
+</script>
+
+<script id='newentryview-template' type='text/template'>
+<h1 class='title'>New Entry</h1>
+<input id='new-entry-title' placeholder='New entry title' type='text'/>
+<input id='new-entry-body' placeholder='New entry content' type='text'/>
+<button id='submit-new-entry'>Submit</button>
+<button id='cancel-new-entry'>Cancel</button>
+</script>
+
+<script id='archivedentryview-template' type='text/template'>
+	<div class='archivedentryview-template-date'>${date}</div>
+	<div class='archivedentryview-template-title'>
+		<a href='#' class='show-entry'>${title}</a>
+	</div>
+</script>
+
+<script id='displayentryview-template' type='text/template'>
+<div>this works!!!!</div>
+</script>
+
+<script>
+	$(document).ready(function() {loadJournal( $('#app') );} ); // start
+</script>
+</body>
+</html>
