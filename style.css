@@ -22,20 +22,64 @@ body {
 	text-align: center;
 	font-size: 200%;
 	font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	/*background-color: #F3F3F3;*/
+	background-color: #D3D3D3;
 }
 
 #app {
 	margin: 0px auto;
+	margin-top: 50px;
 	text-align: left;
 	width: 600px;
+	background-color: white;
+	box-shadow: 0 8px 4px #888, 0 8px 4px #888, 0 8px 4px #888, 0 8px 4px #888;
 }
 
 .title {
 	font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
 	text-align: center;
 	font-size: 200%;
+	padding: 50px 50px;
+	text-shadow: 0 2px #888;
 }
 
 #curr-date-new-entry {
-	font-size: 100%;
+	font-size: 75%;
+	padding: 10px;
+}
+
+#curr-date-new-entry #curr-date {
+	float: left;
+}
+
+#curr-date-new-entry #new-entry {
+	float: right;
+}
+
+#archive {
+	padding: 50px 30px;
+}
+
+#archive .small-title {
+	padding: 0 0 10px 0;
+	text-shadow: 0 1px #888;
+}
+
+#archive li {
+	padding: 5px 0 5px 0;
+	font-size: 75%;
+}
+
+#archive li .archivedentryview-template-date {
+	float: left;
+}
+
+#archive li .archivedentryview-template-title {
+	float: right;
+}
+
+#clear-archive {
+	text-align: center;
+	font-size: 87.5%;
+	padding: 0 0 50px 0;
 }
